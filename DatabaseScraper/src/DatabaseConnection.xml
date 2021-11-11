@@ -1,0 +1,43 @@
+<CONNECTIONS>
+
+    <!-- <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver" DATABASE_URL="jdbc:mysql:///WholesaleBilling"
+        USER_NAME = "root" PASSWORD = "" IS_DEFAULT = "TRUE"/> -->
+
+    <!-- <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver" DATABASE_URL="jdbc:mysql:///serverwholesale"
+        USER_NAME = "root" PASSWORD = "" IS_DEFAULT = "TRUE"/> -->
+
+   <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver"
+                DATABASE_URL="jdbc:mysql:///smsBilling?useEncoding=true&amp;characterEncoding=UTF-8"
+                USER_NAME="root" PASSWORD="" IS_DEFAULT="FALSE"/>
+
+    <!-- <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver" DATABASE_URL="jdbc:mysql://149.20.188.8:2928/iTelsms2?characterEncoding=UTF-8"
+                USER_NAME = "@user" PASSWORD = "A452@#$5"
+                IS_DEFAULT = "TRUE"/> -->
+
+
+
+    <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver"
+                DATABASE_URL="jdbc:mysql://149.20.188.8:3306/iTelsms2?useEncoding=true&amp;characterEncoding=UTF-8"
+                USER_NAME="@ktbilling" PASSWORD="A452@#$5a" IS_DEFAULT="TRUE"/>
+
+
+    <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver"
+                DATABASE_URL="jdbc:mysql://149.20.188.8:3306/iTelsmstest?useEncoding=true&amp;characterEncoding=UTF-8"
+                USER_NAME="@ktbilling" PASSWORD="A452@#$5a" IS_DEFAULT="FALSE"/>
+
+<!--    <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver" DATABASE_URL="jdbc:mysql://188.138.41.146/iTelsms?characterEncoding=UTF-8"-->
+<!--                USER_NAME = "RnD" PASSWORD = "t@nmoy"-->
+<!--                IS_DEFAULT = "TRUE"/>-->
+<!--</CONNECTIONS>-->
+
+    <!--<CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver"-->
+                <!--DATABASE_URL="jdbc:mysql:///Retail?characterEncoding=UTF-8"-->
+                <!--USER_NAME="root" PASSWORD="" IS_DEFAULT="TRUE"/>-->
+
+    <!-- <CONNECTION ID="2" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver" DATABASE_URL="jdbc:mysql://162.222.186.235/iTelBillingWholesale100?rewriteBatchedStatements=true"
+        USER_NAME = "test235" PASSWORD = "test" IS_DEFAULT = "TRUE"/> -->
+
+    <!-- <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver" DATABASE_URL="jdbc:mysql:///test"
+        USER_NAME = "root" PASSWORD = "" IS_DEFAULT = "TRUE"/> -->
+
+</CONNECTIONS>

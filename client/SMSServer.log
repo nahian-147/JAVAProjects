@@ -1,0 +1,12 @@
+2021-11-04 00:20:08:948 FATAL Client:28 - java.net.ConnectException: Connection refused
+2021-11-04 00:29:46:342 FATAL Client:28 - java.net.ConnectException: Connection refused (Connection refused)
+2021-11-04 00:41:43:099 FATAL Client:26 - java.net.ConnectException: Connection refused (Connection refused)
+2021-11-04 08:59:14:034 FATAL Client:29 - java.net.ConnectException: Connection refused (Connection refused)
+2021-11-04 09:00:20:498 FATAL Client:30 - java.net.SocketException: Broken pipe (Write failed)
+2021-11-04 09:00:52:194 FATAL Client:30 - java.net.SocketException: Broken pipe (Write failed)
+2021-11-04 09:01:51:385 INFO  Client:28 - [shutdown]
+2021-11-04 09:02:45:801 INFO  Client:28 - [12, shutdown]
+2021-11-04 09:03:02:085 INFO  Client:28 - [shutdown]
+2021-11-10 13:49:32:504 INFO  Client:28 - [5, 6, 3, 15, shutdown]
+2021-11-10 13:50:06:496 INFO  Client:28 - [7, 8, 100, 10000, 5, 3, 15, 255, 25, shutdown]
+2021-11-11 19:14:50:724 INFO  Client:28 - [1, 2, 3, shutdown]

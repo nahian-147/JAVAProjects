@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DatabaseScraper:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DatabaseScraper_jar</output-path>
+    <root id="archive" name="DatabaseScraper.jar">
+      <element id="module-output" name="DatabaseScraper" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libraries/jdom.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libraries/log4j-1.2.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libraries/DatabaseManager.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libraries/commons-lang3-3.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libraries/mysql-connector-java-3.0.14-production-bin.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
