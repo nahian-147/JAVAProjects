@@ -11,69 +11,69 @@ public class CPUScheduler {
     private HashMap<String,ArrayList<String>> ganttChartrr = new HashMap<>();
     private ArrayList<String> ganttrr;
 
-    public double fcfs(ArrayList<ProcessDTO> p){
+    public double firstComeFirstServed(ArrayList<Process> p){
         ganttfcfs = new ArrayList<>();
-        ArrayList<ProcessDTO> processes = new ArrayList<>();
+        ArrayList<Process> processes = new ArrayList<>();
         processes.addAll(p);
         int time = 0;
         int twt = 0;
         double awt;
-        processes.sort(new ATComparator());
-        for (ProcessDTO process : processes){
-            process.setProcessST(time);
-            ganttChartfcfs.put(process.getName(),new ArrayList<>());
-            process.setProcessWT(time);
-            ganttChartfcfs.get(process.getName()).add(process.getProcessST()+"");
-            ganttfcfs.add(process.getName());
+        processes.sort(new ArrivalTimeComparator());
+        for (Process process : processes){
+            process.setProcessStartupTime(time);
+            ganttChartfcfs.put(process.getProcessName(),new ArrayList<>());
+            process.setProcessWaitingTime(time);
+            ganttChartfcfs.get(process.getProcessName()).add(process.getProcessStartupTime()+"");
+            ganttfcfs.add(process.getProcessName());
             process.setStarted(true);
-            time += process.getProcessRBT();
+            time += process.getProcessRemainingBurstTime();
             process.setCompleted(true);
-            process.setProcessCT(time);
+            process.setProcessCompletionTime(time);
             process.calculateWT();
         }
-        for (ProcessDTO process : processes){
-            twt += process.getProcessWT();
+        for (Process process : processes){
+            twt += process.getProcessWaitingTime();
         }
         awt = (double) twt/processes.size();
         return awt ;
     }
 
-    public double sjfp(ArrayList<ProcessDTO> p){
+    public double shortestJobFirstPreemptive(ArrayList<Process> p){
         ganttsjfp = new ArrayList<>();
-        ArrayList<ProcessDTO> unhandledProcesses = new ArrayList<>();
+        ArrayList<Process> unhandledProcesses = new ArrayList<>();
         unhandledProcesses.addAll(p);
         int time = 0;
         int twt = 0;
-        ProcessDTO runningProcess;
+        Process runningProcess;
         double awt;
-        unhandledProcesses.sort(new ATComparator());
-        ArrayList<ProcessDTO> arrivedProcesses = new ArrayList<>();
-        ArrayList<ProcessDTO> completedProcesses = new ArrayList<>();
+        unhandledProcesses.sort(new ArrivalTimeComparator());
+        ArrayList<Process> arrivedProcesses = new ArrayList<>();
+        ArrayList<Process> completedProcesses = new ArrayList<>();
         while(true){
-            for(ProcessDTO process : unhandledProcesses){
-                if (!ganttChartsjfp.containsKey(process.getName())) ganttChartsjfp.put(process.getName(),new ArrayList<>());
-                if (process.getProcessAT() == time){
+            for(Process process : unhandledProcesses){
+                if (!ganttChartsjfp.containsKey(process.getProcessName())) ganttChartsjfp.put(process.getProcessName(),new ArrayList<>());
+                if (process.getProcessArrivalTime() == time){
                     arrivedProcesses.add(process);
                 }
             }
             if(unhandledProcesses.isEmpty()){
                 break;
             }else if (!arrivedProcesses.isEmpty()){
-                arrivedProcesses.sort(new RBTComparator());
+                arrivedProcesses.sort(new RemainingBurstTimeComparator());
                 runningProcess = arrivedProcesses.get(0);
                 if (!runningProcess.isStarted()){
-                    runningProcess.setProcessST(time);
+                    runningProcess.setProcessStartupTime(time);
                     runningProcess.setStarted(true);
                 }
-                ganttChartsjfp.get(runningProcess.getName()).add(time + "");
-                ganttsjfp.add(runningProcess.getName());
-                runningProcess.setProcessRBT(runningProcess.getProcessRBT()-1);
+                ganttChartsjfp.get(runningProcess.getProcessName()).add(time + "");
+                ganttsjfp.add(runningProcess.getProcessName());
+                runningProcess.setProcessRemainingBurstTime(runningProcess.getProcessRemainingBurstTime()-1);
                 time++;
-                if (runningProcess.getProcessRBT() == 0){
+                if (runningProcess.getProcessRemainingBurstTime() == 0){
                     runningProcess.setCompleted(true);
-                    runningProcess.setProcessCT(time);
+                    runningProcess.setProcessCompletionTime(time);
                     runningProcess.calculateWT();
-                    twt += runningProcess.getProcessWT();
+                    twt += runningProcess.getProcessWaitingTime();
                     completedProcesses.add(runningProcess);
                     arrivedProcesses.remove(runningProcess);
                     unhandledProcesses.remove(runningProcess);
@@ -83,28 +83,28 @@ public class CPUScheduler {
                 time++;
             }
         }
-        for (ProcessDTO process : completedProcesses){
-            twt += process.getProcessWT();
+        for (Process process : completedProcesses){
+            twt += process.getProcessWaitingTime();
         }
         awt = (double) twt/completedProcesses.size();
         return awt ;
     }
 
-    public double sjfnp(ArrayList<ProcessDTO> p){
+    public double shortestJobFirstNonPreemptive(ArrayList<Process> p){
         ganttsjfnp = new ArrayList<>();
-        ArrayList<ProcessDTO> unhandledprocesses = new ArrayList<>();
+        ArrayList<Process> unhandledprocesses = new ArrayList<>();
         unhandledprocesses.addAll(p);
         int time = 0;
         int twt = 0;
-        ProcessDTO runningProcess;
+        Process runningProcess;
         double awt;
-        unhandledprocesses.sort(new ATComparator());
-        ArrayList<ProcessDTO> arrivedProcesses = new ArrayList<>();
-        ArrayList<ProcessDTO> completedProcesses = new ArrayList<>();
+        unhandledprocesses.sort(new ArrivalTimeComparator());
+        ArrayList<Process> arrivedProcesses = new ArrayList<>();
+        ArrayList<Process> completedProcesses = new ArrayList<>();
         while(true){
-            for(ProcessDTO process : unhandledprocesses){
-                if (!ganttChartsjfnp.containsKey(process.getName())) ganttChartsjfnp.put(process.getName(),new ArrayList<>());
-                if (process.getProcessAT() == time){
+            for(Process process : unhandledprocesses){
+                if (!ganttChartsjfnp.containsKey(process.getProcessName())) ganttChartsjfnp.put(process.getProcessName(),new ArrayList<>());
+                if (process.getProcessArrivalTime() == time){
                     arrivedProcesses.add(process);
                 }
             }
@@ -113,24 +113,24 @@ public class CPUScheduler {
             }else if (!arrivedProcesses.isEmpty()){
                 runningProcess = arrivedProcesses.get(0);
                 if (!runningProcess.isStarted()){
-                    runningProcess.setProcessST(time);
+                    runningProcess.setProcessStartupTime(time);
                     runningProcess.setStarted(true);
                 }
-                ganttChartsjfnp.get(runningProcess.getName()).add(time + "");
-                ganttsjfnp.add(runningProcess.getName());
-                runningProcess.setProcessRBT(runningProcess.getProcessRBT()-1);
+                ganttChartsjfnp.get(runningProcess.getProcessName()).add(time + "");
+                ganttsjfnp.add(runningProcess.getProcessName());
+                runningProcess.setProcessRemainingBurstTime(runningProcess.getProcessRemainingBurstTime()-1);
                 time++;
 
-                if (runningProcess.getProcessRBT() == 0){
-                    runningProcess.setProcessCT(time);
+                if (runningProcess.getProcessRemainingBurstTime() == 0){
+                    runningProcess.setProcessCompletionTime(time);
                     runningProcess.setCompleted(true);
                     runningProcess.calculateWT();
                     completedProcesses.add(runningProcess);
                     arrivedProcesses.remove(runningProcess);
                     unhandledprocesses.remove(runningProcess);
-                    twt += runningProcess.getProcessWT();
+                    twt += runningProcess.getProcessWaitingTime();
                     runningProcess.resetProcess();
-                    arrivedProcesses.sort(new RBTComparator());
+                    arrivedProcesses.sort(new RemainingBurstTimeComparator());
                 }
             }else{
                 time++;
@@ -140,21 +140,21 @@ public class CPUScheduler {
         return awt ;
     }
 
-    public double roundrobin(ArrayList<ProcessDTO> p,int slotLength){
+    public double roundRobin(ArrayList<Process> p, int slotLength){
         double awt;
         int time = 0;
         int twt = 0;
-        ProcessDTO runningProcess = null;
+        Process runningProcess = null;
         ganttrr = new ArrayList<>();
-        ArrayList<ProcessDTO> unhandledprocesses = new ArrayList<>();
+        ArrayList<Process> unhandledprocesses = new ArrayList<>();
         unhandledprocesses.addAll(p);
-        unhandledprocesses.sort(new ATComparator());
-        ArrayList<ProcessDTO> arrivedProcesses = new ArrayList<>();
-        ArrayList<ProcessDTO> completedProcesses = new ArrayList<>();
+        unhandledprocesses.sort(new ArrivalTimeComparator());
+        ArrayList<Process> arrivedProcesses = new ArrayList<>();
+        ArrayList<Process> completedProcesses = new ArrayList<>();
         while(true){
-            for(ProcessDTO process : unhandledprocesses){
-                if (!ganttChartrr.containsKey(process.getName())) ganttChartrr.put(process.getName(),new ArrayList<>());
-                if (process.getProcessAT() <= time){
+            for(Process process : unhandledprocesses){
+                if (!ganttChartrr.containsKey(process.getProcessName())) ganttChartrr.put(process.getProcessName(),new ArrayList<>());
+                if (process.getProcessArrivalTime() <= time){
                     if (!arrivedProcesses.contains(process)){
                         arrivedProcesses.add(process);
                     }
@@ -163,33 +163,33 @@ public class CPUScheduler {
             if(unhandledprocesses.isEmpty()){
                 break;
             }else if (!arrivedProcesses.isEmpty()){
-                for (ProcessDTO process : arrivedProcesses){
+                for (Process process : arrivedProcesses){
                     runningProcess = process;
                     if (!runningProcess.isStarted()){
-                        runningProcess.setProcessST(time);
+                        runningProcess.setProcessStartupTime(time);
                         runningProcess.setStarted(true);
                     }
                     int timeSlot;
-                    if (runningProcess.getProcessRBT() >= slotLength){
+                    if (runningProcess.getProcessRemainingBurstTime() >= slotLength){
                         timeSlot = slotLength;
                     }else {
-                        timeSlot = runningProcess.getProcessRBT();
+                        timeSlot = runningProcess.getProcessRemainingBurstTime();
                     }
                     for (int t=0;t<timeSlot;t++){
-                        ganttChartrr.get(runningProcess.getName()).add(time + "");
-                        ganttrr.add(runningProcess.getName());
-                        runningProcess.setProcessRBT(runningProcess.getProcessRBT()-1);
+                        ganttChartrr.get(runningProcess.getProcessName()).add(time + "");
+                        ganttrr.add(runningProcess.getProcessName());
+                        runningProcess.setProcessRemainingBurstTime(runningProcess.getProcessRemainingBurstTime()-1);
                         time++;
                     }
                 }
-                if (runningProcess.getProcessRBT() == 0){
-                    runningProcess.setProcessCT(time);
+                if (runningProcess.getProcessRemainingBurstTime() == 0){
+                    runningProcess.setProcessCompletionTime(time);
                     runningProcess.setCompleted(true);
                     runningProcess.calculateWT();
                     completedProcesses.add(runningProcess);
                     arrivedProcesses.remove(runningProcess);
                     unhandledprocesses.remove(runningProcess);
-                    twt += runningProcess.getProcessWT();
+                    twt += runningProcess.getProcessWaitingTime();
                     runningProcess.resetProcess();
                 }
             }else{
