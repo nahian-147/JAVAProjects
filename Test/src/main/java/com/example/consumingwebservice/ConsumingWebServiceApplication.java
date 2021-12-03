@@ -5,7 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.example.consumingwebservice.wsdl.GetCountryResponse;
 
 @SpringBootApplication
 public class ConsumingWebServiceApplication {
@@ -22,8 +21,8 @@ public class ConsumingWebServiceApplication {
 			if (args.length > 0) {
 				country = args[0];
 			}
-			GetCountryResponse response = quoteClient.getCountry(country);
-			System.err.println(response.getCountry().getCapital());
+//			GetCountryResponse response = quoteClient.getCountry(country);
+//			System.err.println(response.getCountry().getCapital());
 		};
 	}
 

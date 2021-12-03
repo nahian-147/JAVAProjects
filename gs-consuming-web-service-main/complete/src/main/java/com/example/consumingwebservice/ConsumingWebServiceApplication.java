@@ -1,4 +1,3 @@
-
 package com.example.consumingwebservice;
 
 import org.springframework.boot.CommandLineRunner;
@@ -18,13 +17,13 @@ public class ConsumingWebServiceApplication {
 	@Bean
 	CommandLineRunner lookup(CountryClient quoteClient) {
 		return args -> {
-			String country = "Spain";
+			String country = "Poland";
 
 			if (args.length > 0) {
 				country = args[0];
 			}
 			GetCountryResponse response = quoteClient.getCountry(country);
-			System.err.println(response.getCountry().getCurrency());
+			System.err.println(response.getCountry().getCapital());
 		};
 	}
 

@@ -112,3 +112,7 @@
 2021-11-04 00:02:11:528 FATAL Client:28 - java.net.ConnectException: Connection refused (Connection refused)
 2021-11-08 16:41:59:043 INFO  KServer:22 - Starting KServer 1.0
 2021-11-08 16:41:59:046 INFO  KServer:28 - KServer Started at port 1381
+2021-11-11 20:23:14:176 INFO  KServer:24 - Starting KServer 1.0
+2021-11-11 20:23:14:184 FATAL KServer:28 - java.net.BindException: Address already in use (Bind failed)
+2021-11-11 20:23:32:503 INFO  KServer:24 - Starting KServer 1.0
+2021-11-11 20:23:32:510 INFO  KServer:30 - KServer Started at port 1381

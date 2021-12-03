@@ -4,6 +4,7 @@ import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -19,9 +20,10 @@ public class KServer {
     }
 
     public void startServer(){
+        String host = "localhost";
         logger.info("Starting KServer 1.0");
         try {
-            socket = new ServerSocket(PORT);
+            socket = new ServerSocket(PORT,50, InetAddress.getByName(host));
         } catch (IOException e) {
             logger.fatal(e);
         }

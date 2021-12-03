@@ -1,4 +1,3 @@
-
 package com.example.consumingwebservice;
 
 import org.springframework.context.annotation.Bean;

@@ -116,3 +116,5 @@
 2021-11-11 19:14:15:161 INFO  KServer:28 - KServer Started at port 1381
 2021-11-11 19:14:50:723 INFO  KServer:32 - Shutting Down kServer.
 2021-11-11 19:14:50:725 DEBUG Driver:51 - ...END...
+2021-11-11 19:42:56:048 INFO  KServer:22 - Starting KServer 1.0
+2021-11-11 19:42:56:056 INFO  KServer:28 - KServer Started at port 1381

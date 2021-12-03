@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b750f25-15d7-474d-a8ee-bdf38eb5f2c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/TableInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iTelBilling.log" beforeDir="false" afterPath="$PROJECT_DIR$/iTelBilling.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DatabaseScraper/DatabaseConnection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DatabaseScraper/DatabaseConnection.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DatabaseScraper/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DatabaseScraper/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DatabaseConnection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseConnection.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduling/out/production/scheduling/ATComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduling/out/production/scheduling/ATComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduling/out/production/scheduling/CPUScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduling/out/production/scheduling/CPUScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduling/out/production/scheduling/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduling/out/production/scheduling/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduling/out/production/scheduling/ProcessDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduling/out/production/scheduling/ProcessDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scheduling/out/production/scheduling/RBTComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduling/out/production/scheduling/RBTComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../updater/SMSServer.log" beforeDir="false" afterPath="$PROJECT_DIR$/../updater/SMSServer.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../updater/out/artifacts/server/SMSServer.log" beforeDir="false" afterPath="$PROJECT_DIR$/../updater/out/artifacts/server/SMSServer.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../updater/out/production/updater/KServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../updater/out/production/updater/KServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../updater/src/KServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../updater/src/KServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
