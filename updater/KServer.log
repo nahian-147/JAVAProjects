@@ -1,0 +1,14 @@
+2022-01-23 11:22:56:215 INFO  KServer:24 - Starting KServer 1.0
+2022-01-23 11:22:56:222 INFO  KServer:30 - KServer Started at port 1381
+2022-01-23 11:25:36:732 INFO  KServer:34 - Shutting Down kServer.
+2022-01-23 11:25:36:734 DEBUG Driver:51 - ...END...
+2022-01-23 11:25:50:753 INFO  KServer:24 - Starting KServer 1.0
+2022-01-23 11:25:50:760 INFO  KServer:30 - KServer Started at port 1381
+2022-01-23 11:26:21:885 INFO  KServer:24 - Starting KServer 1.0
+2022-01-23 11:26:21:894 INFO  KServer:30 - KServer Started at port 1381
+2022-01-23 11:26:38:123 INFO  KServer:34 - Shutting Down KServer.
+2022-01-23 11:26:38:124 DEBUG Driver:51 - ...END...
+2022-01-23 11:27:03:319 INFO  KServer:24 - Starting KServer 1.0
+2022-01-23 11:27:03:331 INFO  KServer:30 - KServer Started at port 1381
+2022-01-23 11:27:19:237 INFO  KServer:34 - Shutting Down KServer.
+2022-01-23 11:27:19:239 DEBUG Driver:51 - ...END...

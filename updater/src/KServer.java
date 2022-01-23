@@ -31,7 +31,7 @@ public class KServer {
     }
 
     public void shutDownServer(){
-        logger.info("Shutting Down kServer.");
+        logger.info("Shutting Down KServer.");
         try {
             socket.close();
         } catch (IOException e) {

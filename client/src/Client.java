@@ -16,7 +16,7 @@ public class Client{
 			Scanner scanner = new Scanner(System.in);
 			ArrayList<String> params = new ArrayList<>();
 			while (true) {
-				s = new Socket("192.168.0.112",1381);
+				s = new Socket("localhost",1381);
 				out = new DataOutputStream(s.getOutputStream());
 				line = scanner.nextLine();
 				out.writeUTF(line);

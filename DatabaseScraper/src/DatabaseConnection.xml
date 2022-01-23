@@ -8,7 +8,7 @@
 
    <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver"
                 DATABASE_URL="jdbc:mysql:///smsBilling?useEncoding=true&amp;characterEncoding=UTF-8"
-                USER_NAME="root" PASSWORD="kazi_81" IS_DEFAULT="TRUE"/>
+                USER_NAME="root" PASSWORD="kazi_81" IS_DEFAULT="FALSE"/>
 
     <!-- <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver" DATABASE_URL="jdbc:mysql://149.20.188.8:2928/iTelsms2?characterEncoding=UTF-8"
                 USER_NAME = "@user" PASSWORD = "A452@#$5"
@@ -18,7 +18,7 @@
 
     <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver"
                 DATABASE_URL="jdbc:mysql://149.20.188.8:3306/iTelsms2?useEncoding=true&amp;characterEncoding=UTF-8"
-                USER_NAME="@ktbilling" PASSWORD="A452@#$5a" IS_DEFAULT="FALSE"/>
+                USER_NAME="@ktbilling" PASSWORD="A452@#$5a" IS_DEFAULT="TRUE"/>
 
 
     <CONNECTION ID="1" DRIVER_CLASS_NAME="com.mysql.jdbc.Driver"

@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b750f25-15d7-474d-a8ee-bdf38eb5f2c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TableInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iTelBilling.log" beforeDir="false" afterPath="$PROJECT_DIR$/iTelBilling.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DatabaseScraper/DatabaseConnection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DatabaseScraper/DatabaseConnection.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DatabaseScraper/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DatabaseScraper/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DatabaseConnection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseConnection.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scheduling/out/production/scheduling/ATComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduling/out/production/scheduling/ATComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scheduling/out/production/scheduling/CPUScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduling/out/production/scheduling/CPUScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scheduling/out/production/scheduling/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduling/out/production/scheduling/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scheduling/out/production/scheduling/ProcessDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduling/out/production/scheduling/ProcessDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scheduling/out/production/scheduling/RBTComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scheduling/out/production/scheduling/RBTComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../updater/SMSServer.log" beforeDir="false" afterPath="$PROJECT_DIR$/../updater/SMSServer.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../updater/out/artifacts/server/SMSServer.log" beforeDir="false" afterPath="$PROJECT_DIR$/../updater/out/artifacts/server/SMSServer.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../updater/out/production/updater/KServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../updater/out/production/updater/KServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../updater/src/KServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../updater/src/KServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +31,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="20chQds2FBY3i5ua2g87o4O3quo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,6 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../updater" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -83,6 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636349771305</updated>
       <workItem from="1636350900081" duration="161000" />
+      <workItem from="1639910721688" duration="681000" />
     </task>
     <servers />
   </component>
@@ -99,7 +93,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
