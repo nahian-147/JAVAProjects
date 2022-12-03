@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'application'
 }
 
 group = 'com.nahian'
@@ -15,8 +16,14 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.1'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.1'
 }
 
 test {
 	useJUnitPlatform()
+}
+
+bootJar {
+	mainClassName = 'com.nahian.continum.ContinumApplication'
 }
