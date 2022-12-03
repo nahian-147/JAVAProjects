@@ -44,19 +44,36 @@ public class ContinumApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		Logger logger = LoggerFactory.getLogger(ContinumApplication.class);
+	Logger logger = LoggerFactory.getLogger(ContinumApplication.class);
 
-                logger.info("Continuum Application Starting...");
-		logger.debug("Debugging...");
-		logger.info("This is an Info...");
-		logger.warn("This is a Warning...");
-		logger.info("From Eclipse");
-		
-		double s = 0.0;
-		for (int k=0;k<5;k++) {
-			s += 1/java.lang.Math.pow(3, k);
+        logger.info("Continuum Application Starting...");
+	logger.debug("Debugging...");
+	logger.info("From Eclipse");
+	logger.info("from NetBeans");
+//	double s = 0.0;
+//	for (int k=0;k<5;k++) {
+//            s += 1/java.lang.Math.pow(3, k);
+//	}
+//	logger.info("sum "+s);
+//	logger.info("Continuum Application Shutting Down");
+
+        
+        try {
+            KServer k = new KServer();
+            k.startServer();
+            while (true){
+            String[] i = k.getInput();
+            if (i.length > 0 && i != null ){
+                if (i[0].equalsIgnoreCase("shutdown")){
+                    k.shutDownServer();
+                    break;
+		}else if (i[0].length() != 0)
+                    runner(i);
+            }
+            }
+		logger.debug("...END...");
+		} catch (IOException e) {
+                    logger.debug(""+e);
 		}
-		logger.info("sum "+s);
-		logger.info("Continuum Application Shutting Down");
-	}
+        }
 }
